@@ -26,13 +26,14 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+mu = mean(X);
+sigma = std(X);
 
+% create matrix of mu and sigma of same dimensions as X
+mu1 = repmat(mu, [size(X)(1) 1]);
+sigma1 = repmat(sigma, [size(X)(1) 1]);
 
-
-
-
-
-
+X_norm = (X - mu1) ./ sigma1 ;
 
 % ============================================================
 
